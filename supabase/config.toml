@@ -1,1 +1,7 @@
 project_id = "bgedrwchmawosertbtoe"
+
+[functions.whatsapp-chat]
+verify_jwt = false
+
+[functions.book-ride]
+verify_jwt = false

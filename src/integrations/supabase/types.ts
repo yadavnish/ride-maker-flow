@@ -14,35 +14,142 @@ export type Database = {
   }
   public: {
     Tables: {
-      ride_bookings: {
+      drivers: {
         Row: {
           created_at: string
-          dropoff_location: string
-          estimated_fare: string | null
+          current_location: string | null
           id: string
-          pickup_location: string
+          name: string
+          phone: string | null
+          rating: number | null
           ride_type: string
           status: string
+          vehicle_number: string
         }
         Insert: {
           created_at?: string
-          dropoff_location: string
-          estimated_fare?: string | null
+          current_location?: string | null
           id?: string
-          pickup_location: string
+          name: string
+          phone?: string | null
+          rating?: number | null
           ride_type: string
           status?: string
+          vehicle_number: string
         }
         Update: {
           created_at?: string
+          current_location?: string | null
+          id?: string
+          name?: string
+          phone?: string | null
+          rating?: number | null
+          ride_type?: string
+          status?: string
+          vehicle_number?: string
+        }
+        Relationships: []
+      }
+      live_tracking: {
+        Row: {
+          current_lat: number | null
+          current_lng: number | null
+          driver_id: string | null
+          id: string
+          ride_id: string | null
+          status: string | null
+          updated_at: string
+        }
+        Insert: {
+          current_lat?: number | null
+          current_lng?: number | null
+          driver_id?: string | null
+          id?: string
+          ride_id?: string | null
+          status?: string | null
+          updated_at?: string
+        }
+        Update: {
+          current_lat?: number | null
+          current_lng?: number | null
+          driver_id?: string | null
+          id?: string
+          ride_id?: string | null
+          status?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "live_tracking_driver_id_fkey"
+            columns: ["driver_id"]
+            isOneToOne: false
+            referencedRelation: "drivers"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "live_tracking_ride_id_fkey"
+            columns: ["ride_id"]
+            isOneToOne: false
+            referencedRelation: "ride_bookings"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      ride_bookings: {
+        Row: {
+          created_at: string
+          driver_id: string | null
+          dropoff_lat: number | null
+          dropoff_lng: number | null
+          dropoff_location: string
+          estimated_fare: string | null
+          id: string
+          pickup_lat: number | null
+          pickup_lng: number | null
+          pickup_location: string
+          ride_type: string
+          status: string
+          user_phone: string | null
+        }
+        Insert: {
+          created_at?: string
+          driver_id?: string | null
+          dropoff_lat?: number | null
+          dropoff_lng?: number | null
+          dropoff_location: string
+          estimated_fare?: string | null
+          id?: string
+          pickup_lat?: number | null
+          pickup_lng?: number | null
+          pickup_location: string
+          ride_type: string
+          status?: string
+          user_phone?: string | null
+        }
+        Update: {
+          created_at?: string
+          driver_id?: string | null
+          dropoff_lat?: number | null
+          dropoff_lng?: number | null
           dropoff_location?: string
           estimated_fare?: string | null
           id?: string
+          pickup_lat?: number | null
+          pickup_lng?: number | null
           pickup_location?: string
           ride_type?: string
           status?: string
+          user_phone?: string | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "ride_bookings_driver_id_fkey"
+            columns: ["driver_id"]
+            isOneToOne: false
+            referencedRelation: "drivers"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {
