@@ -2,72 +2,43 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/efcda5af-8cb8-49a0-ba50-fe61c9990a55
+**URL**: https://ride-maker-flow.vercel.app/
 
-## How can I edit this code?
+PROBLEM STATEMENT:
+Commuters today face major inconvenience while booking rides due to the
+fragmented nature of existing ride-hailing services. They constantly switch
+between multiple apps like Uber, Ola, and Rapido to compare fares, driver
+availability, and waiting times.
+This repetitive and time-consuming process results in confusion, data
+redundancy, and poor accessibility, especially for users who want a quick,
+seamless, and unified ride-booking experience.
+There is a clear need for a centralized and intelligent platform that can
+aggregate real-time data from multiple ride providers, allow instant ride
+booking, and enable natural, conversational interaction — all in one place,
+without the hassle of juggling between different apps.
 
-There are several ways of editing your application.
+SOLUTION:
+I created Ride Maker flow, an AI-powered ride-booking platform that brings together
+multiple cab services like Uber, Ola, and Rapido into a single, unified interface — fully
+accessible through WhatsApp.
+The platform aggregates real-time ride data from different providers, enabling users to
+compare fares, ETAs, and driver details instantly without opening multiple apps.
+Through a simple WhatsApp chat, users can book rides, check availability, and view trip
+history, all through natural, conversational messages powered by an AI Chatbot Assistant.
+With one-click booking and instant confirmation, Ride Maker flow eliminates app fatigue
+and provides a seamless, accessible, and intelligent mobility experience for everyone —
+anytime, anywhere, directly from WhatsApp.
 
-**Use Lovable**
+TECHSTACKS:
+FRONTEND: REACT, JAVASCRIPT
+LLM: GEMINI 2.5 FLASH
+API: AI4BHARAT
+BACKEND: EXPRESS, JS,
+DATABASE:POSTGRESQL
+CLOUD:SUPERBASE
+VOICE RECOGNITION:MEDIA URL
+MESSAGE:TWILIO
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/efcda5af-8cb8-49a0-ba50-fe61c9990a55) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+COMMANDS:
+npm install
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/efcda5af-8cb8-49a0-ba50-fe61c9990a55) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
